@@ -14,6 +14,14 @@ int sumOfArray2(int a[], int n){
     }
     return a[n-1] + sumOfArray2(a, n-1);
 }
+
+int sumOfArray3(int a[], int n, int i){
+    if(i==n){
+        return 0;
+    }
+    return a[i] + sumOfArray3(a, n, i+1);
+}
+
 int main(){
     int a[] = {1,2,3};
     cout<<sumOfArray(a, 3)<<endl;
