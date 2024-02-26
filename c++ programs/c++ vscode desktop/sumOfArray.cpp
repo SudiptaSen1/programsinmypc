@@ -1,0 +1,22 @@
+#include<iostream>
+using namespace std;
+
+int sumOfArray(int a[], int n){
+    if(n == 0){
+        return 0;
+    }
+    return a[0] + sumOfArray(a+1, n-1);
+}
+
+int sumOfArray2(int a[], int n){
+    if (n==0){
+        return 0;
+    }
+    return a[n-1] + sumOfArray2(a, n-1);
+}
+int main(){
+    int a[] = {1,2,3};
+    cout<<sumOfArray(a, 3)<<endl;
+    cout<<sumOfArray2(a, 3)<<endl;
+    return 0;
+}
